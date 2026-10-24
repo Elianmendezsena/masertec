@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Servicios técnicos: eléctrico, plomería, aires y más | MASERTEC</title>
+<meta name="description" content="15 servicios técnicos en un solo equipo: electricidad, plomería, electrobombas, aires acondicionados, equipos médicos, obras civiles, soldadura y mantenimiento general.">
+<link rel="canonical" href="https://TU-DOMINIO.netlify.app/servicios">
+<meta name="theme-color" content="#14171a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_DO">
+<meta property="og:site_name" content="MASERTEC MA Servicios Técnicos">
+<meta property="og:title" content="Servicios técnicos: eléctrico, plomería, aires y más | MASERTEC">
+<meta property="og:description" content="15 servicios técnicos en un solo equipo: electricidad, plomería, electrobombas, aires acondicionados, equipos médicos, obras civiles, soldadura y mantenimiento general.">
+<meta property="og:url" content="https://TU-DOMINIO.netlify.app/servicios">
+<meta property="og:image" content="https://TU-DOMINIO.netlify.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>try{var t=localStorage.getItem("mt-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="servicios">
+<a class="skip" id="skip" href="#principal">Saltar al contenido</a>
+<div class="sr" id="live" aria-live="polite"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="MASERTEC, ir al inicio">
+      <img class="logo-img logo-d" src="logo-masertec.png" width="468" height="147" alt="MASERTEC">
+      <img class="logo-img logo-l" src="logo-masertec-claro.png" width="468" height="147" alt="MASERTEC">
+    </a>
+    <nav class="nav" id="nav" aria-label="Secciones">
+      <a href="servicios.html" aria-current="page">Servicios</a><a href="suministros.html">Suministros</a><a href="como-trabajamos.html">Cómo trabajamos</a><a href="modalidades.html">Modalidades</a><a href="contacto.html">Contacto</a>
+    </nav>
+    <a class="btn" href="contacto.html">Cotizar</a>
+    <button class="icon-btn" id="theme-btn" type="button" aria-label="Cambiar a modo claro"></button>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="principal" tabindex="-1">
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Portafolio técnico · MST-01 a MST-15</span><h1>Servicios</h1></div>
+        <p>Cada servicio se contrata solo o combinado. Pulsa “Agregar a cotización” y quedará listo en el formulario de contacto.</p>
+        <a class="btn ghost pdf-dl" href="catalogo-masertec.pdf" target="_blank" rel="noopener">Descargar catálogo (PDF)</a>
+      </div>
+      <div class="filters">
+        <div class="prob">
+          <span class="lbl" id="prob-lbl">¿Qué problema tienes?</span>
+          <div class="fchips" id="prob" role="group" aria-labelledby="prob-lbl"><button type="button" class="fchip pchip" aria-pressed="false" data-codes="MST-01">Falla eléctrica</button><button type="button" class="fchip pchip" aria-pressed="false" data-codes="MST-02,MST-08,MST-10">Fuga o drenaje tapado</button><button type="button" class="fchip pchip" aria-pressed="false" data-codes="MST-04">El aire no enfría</button><button type="button" class="fchip pchip" aria-pressed="false" data-codes="MST-03">La bomba no arranca</button><button type="button" class="fchip pchip" aria-pressed="false" data-codes="MST-05,MST-06">Equipo dañado</button><button type="button" class="fchip pchip" aria-pressed="false" data-codes="MST-07,MST-14">Reparación u obra</button><button type="button" class="fchip pchip" aria-pressed="false" data-codes="MST-15">No sé qué necesito</button></div>
+        </div>
+        <input id="s-q" type="search" aria-label="Buscar servicio" placeholder="Buscar: bomba, fuga, aire, soldadura..." autocomplete="off">
+        <div class="fchips" role="group" aria-label="Filtrar por grupo">
+          <button class="fchip" type="button" data-g="all" aria-pressed="true">Todos</button>
+          <button class="fchip" type="button" data-g="tec" aria-pressed="false">Eléctrico y mecánico</button>
+          <button class="fchip" type="button" data-g="infra" aria-pressed="false">Infraestructura y generales</button>
+        </div>
+        <p class="count" id="s-count" aria-live="polite">Mostrando 15 de 15 servicios</p>
+      </div>
+      <div class="cards" id="cards">
+<div class="group-label" data-g="tec">Disciplinas eléctricas, mecánicas y biomédicas</div>
+<article class="card" data-g="tec" data-code="MST-01" data-text="mantenimiento electrico preventivo y correctivo de instalaciones, tableros, breakers, luminarias, circuitos y tomacorrientes. incluye cableado y canalizacion. tableros circuitos cableado"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div class="ct"><span class="code">MST-01</span><h3>Mantenimiento eléctrico</h3></div></div><p class="short">Tableros, breakers, circuitos y cableado.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Preventivo y correctivo de instalaciones, tableros, breakers, luminarias, circuitos y tomacorrientes. Incluye cableado y canalización.</p><div class="tags"><span>Tableros</span><span>Circuitos</span><span>Cableado</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Mantenimiento eléctrico">Agregar a cotización</button></article>
+<article class="card" data-g="tec" data-code="MST-02" data-text="plomeria y sistemas sanitarios instalacion, reparacion y mantenimiento de tuberias, desagues, valvulas, aparatos sanitarios y redes de agua. reparacion de fugas. tuberias valvulas fugas"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></span><div class="ct"><span class="code">MST-02</span><h3>Plomería y sistemas sanitarios</h3></div></div><p class="short">Tuberías, válvulas, desagües y reparación de fugas.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Instalación, reparación y mantenimiento de tuberías, desagües, válvulas, aparatos sanitarios y redes de agua. Reparación de fugas.</p><div class="tags"><span>Tuberías</span><span>Válvulas</span><span>Fugas</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Plomería y sistemas sanitarios">Agregar a cotización</button></article>
+<article class="card" data-g="tec" data-code="MST-03" data-text="electrobombas y bombeo instalacion, diagnostico, mantenimiento y reparacion de bombas, motores, controles y sistemas de presion. bombas presion"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.5-5.8M20 4v5h-5"/></svg></span><div class="ct"><span class="code">MST-03</span><h3>Electrobombas y bombeo</h3></div></div><p class="short">Bombas, motores y sistemas de presión.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Instalación, diagnóstico, mantenimiento y reparación de bombas, motores, controles y sistemas de presión.</p><div class="tags"><span>Bombas</span><span>Presión</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Electrobombas y bombeo">Agregar a cotización</button></article>
+<article class="card" data-g="tec" data-code="MST-04" data-text="aires acondicionados instalacion, mantenimiento preventivo y correctivo, limpieza, revision de drenajes y diagnostico de fallas. climatizacion drenajes"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/></svg></span><div class="ct"><span class="code">MST-04</span><h3>Aires acondicionados</h3></div></div><p class="short">Instalación, mantenimiento y diagnóstico de fallas.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Instalación, mantenimiento preventivo y correctivo, limpieza, revisión de drenajes y diagnóstico de fallas.</p><div class="tags"><span>Climatización</span><span>Drenajes</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Aires acondicionados">Agregar a cotización</button></article>
+<article class="card" data-g="tec" data-code="MST-05" data-text="equipos medicos y biomedicos mantenimiento, reparacion y soporte tecnico para equipos medicos y de oficina, segun alcance y disponibilidad de repuestos. biomedico soporte"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg></span><div class="ct"><span class="code">MST-05</span><h3>Equipos médicos y biomédicos</h3></div></div><p class="short">Equipos médicos y de oficina, según alcance.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Mantenimiento, reparación y soporte técnico para equipos médicos y de oficina, según alcance y disponibilidad de repuestos.</p><div class="tags"><span>Biomédico</span><span>Soporte</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Equipos médicos y biomédicos">Agregar a cotización</button></article>
+<article class="card" data-g="tec" data-code="MST-06" data-text="equipos industriales y electronicos diagnostico, mantenimiento y reparacion de equipos y componentes electricos, electronicos, electromecanicos e industriales. diagnostico electronica motores"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10H7zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></span><div class="ct"><span class="code">MST-06</span><h3>Equipos industriales y electrónicos</h3></div></div><p class="short">Equipos eléctricos, electrónicos e industriales.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Diagnóstico, mantenimiento y reparación de equipos y componentes eléctricos, electrónicos, electromecánicos e industriales.</p><div class="tags"><span>Diagnóstico</span><span>Electrónica</span><span>Motores</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Equipos industriales y electrónicos">Agregar a cotización</button></article>
+<div class="group-label" data-g="infra">Infraestructura y servicios generales</div>
+<article class="card" data-g="infra" data-code="MST-07" data-text="obras civiles y remodelacion reparacion, adecuacion, mantenimiento y remodelacion de espacios e infraestructura. obra remodelacion"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8v10H3zM10 21v-6h4v6"/></svg></span><div class="ct"><span class="code">MST-07</span><h3>Obras civiles y remodelación</h3></div></div><p class="short">Reparación, adecuación y remodelación de espacios.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Reparación, adecuación, mantenimiento y remodelación de espacios e infraestructura.</p><div class="tags"><span>Obra</span><span>Remodelación</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Obras civiles y remodelación">Agregar a cotización</button></article>
+<article class="card" data-g="infra" data-code="MST-08" data-text="instalaciones hidraulicas y sanitarias ejecucion y mantenimiento de redes hidraulicas, sanitarias, drenajes y canalizaciones. redes drenajes"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h9v10h9M3 5v4M21 15v4"/></svg></span><div class="ct"><span class="code">MST-08</span><h3>Instalaciones hidráulicas y sanitarias</h3></div></div><p class="short">Redes hidráulicas, sanitarias y drenajes.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Ejecución y mantenimiento de redes hidráulicas, sanitarias, drenajes y canalizaciones.</p><div class="tags"><span>Redes</span><span>Drenajes</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Instalaciones hidráulicas y sanitarias">Agregar a cotización</button></article>
+<article class="card" data-g="infra" data-code="MST-09" data-text="limpieza institucional e industrial limpieza y mantenimiento de areas institucionales, comerciales e industriales. limpieza"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><div class="ct"><span class="code">MST-09</span><h3>Limpieza institucional e industrial</h3></div></div><p class="short">Áreas institucionales, comerciales e industriales.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Limpieza y mantenimiento de áreas institucionales, comerciales e industriales.</p><div class="tags"><span>Limpieza</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Limpieza institucional e industrial">Agregar a cotización</button></article>
+<article class="card" data-g="infra" data-code="MST-10" data-text="septicos y drenajes limpieza y mantenimiento de sistemas septicos, drenajes y sistemas sanitarios. septicos sanitarios"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6c0-1.7 3.1-3 7-3s7 1.3 7 3-3.1 3-7 3-7-1.3-7-3zM5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/></svg></span><div class="ct"><span class="code">MST-10</span><h3>Sépticos y drenajes</h3></div></div><p class="short">Sistemas sépticos, drenajes y sanitarios.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Limpieza y mantenimiento de sistemas sépticos, drenajes y sistemas sanitarios.</p><div class="tags"><span>Sépticos</span><span>Sanitarios</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Sépticos y drenajes">Agregar a cotización</button></article>
+<article class="card" data-g="infra" data-code="MST-11" data-text="jardineria y areas verdes poda, limpieza, acondicionamiento y conservacion de jardines y areas verdes. poda jardines"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15zM5 19l8-8"/></svg></span><div class="ct"><span class="code">MST-11</span><h3>Jardinería y áreas verdes</h3></div></div><p class="short">Poda, limpieza y conservación de áreas verdes.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Poda, limpieza, acondicionamiento y conservación de jardines y áreas verdes.</p><div class="tags"><span>Poda</span><span>Jardines</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Jardinería y áreas verdes">Agregar a cotización</button></article>
+<article class="card" data-g="infra" data-code="MST-12" data-text="transporte y apoyo logistico transporte de personal, equipos, materiales y bienes vinculados a los servicios contratados. coordinacion de entregas. logistica entregas"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h12v10H2zM14 10h4l4 3v3h-8zM4.5 18a1.8 1.8 0 1 0 3.6 0a1.8 1.8 0 1 0-3.6 0M15.5 18a1.8 1.8 0 1 0 3.6 0a1.8 1.8 0 1 0-3.6 0"/></svg></span><div class="ct"><span class="code">MST-12</span><h3>Transporte y apoyo logístico</h3></div></div><p class="short">Traslado de personal, equipos y materiales.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Transporte de personal, equipos, materiales y bienes vinculados a los servicios contratados. Coordinación de entregas.</p><div class="tags"><span>Logística</span><span>Entregas</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Transporte y apoyo logístico">Agregar a cotización</button></article>
+<article class="card" data-g="infra" data-code="MST-13" data-text="mantenimiento de vehiculos mantenimiento preventivo y correctivo de vehiculos y equipos de transporte, segun alcance. vehiculos"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.2-.5-.5-2.2z"/></svg></span><div class="ct"><span class="code">MST-13</span><h3>Mantenimiento de vehículos</h3></div></div><p class="short">Preventivo y correctivo de vehículos y equipos.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Mantenimiento preventivo y correctivo de vehículos y equipos de transporte, según alcance.</p><div class="tags"><span>Vehículos</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Mantenimiento de vehículos">Agregar a cotización</button></article>
+<article class="card" data-g="infra" data-code="MST-14" data-text="soldadura y trabajos metalicos fabricacion, reparacion y adecuacion de estructuras y elementos metalicos. soldadura estructuras"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-9z"/></svg></span><div class="ct"><span class="code">MST-14</span><h3>Soldadura y trabajos metálicos</h3></div></div><p class="short">Estructuras y elementos metálicos.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Fabricación, reparación y adecuación de estructuras y elementos metálicos.</p><div class="tags"><span>Soldadura</span><span>Estructuras</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Soldadura y trabajos metálicos">Agregar a cotización</button></article>
+<article class="card" data-g="infra" data-code="MST-15" data-text="mantenimiento general atencion integral de necesidades de mantenimiento en instalaciones comerciales, institucionales e industriales. el respaldo cuando no esta claro a quien mas llamar. integral"><div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18v12H3zM9 8V5h6v3M3 13h18"/></svg></span><div class="ct"><span class="code">MST-15</span><h3>Mantenimiento general</h3></div></div><p class="short">Atención integral de mantenimiento.</p><details class="more"><summary><span class="o">Ver más</span><span class="c">Ver menos</span></summary><p>Atención integral de necesidades de mantenimiento en instalaciones comerciales, institucionales e industriales. El respaldo cuando no está claro a quién más llamar.</p><div class="tags"><span>Integral</span></div></details><button class="add" type="button" aria-pressed="false" data-name="Mantenimiento general">Agregar a cotización</button></article>
+</div>
+      <p class="empty-msg" id="s-empty" hidden>No encontramos servicios con esa búsqueda. Escríbenos lo que necesitas en el formulario de contacto y lo evaluamos.</p>
+      <nav class="pager" aria-label="Navegar entre secciones"><a class="prev" href="index.html"><span>Anterior</span>Inicio</a><a class="next" href="suministros.html"><span>Siguiente</span>Ferretería y suministros</a></nav>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="MASERTEC, ir al inicio">
+      <img class="logo-img logo-d" src="logo-masertec.png" width="468" height="147" alt="MASERTEC">
+      <img class="logo-img logo-l" src="logo-masertec-claro.png" width="468" height="147" alt="MASERTEC">
+    </a>
+    <nav class="footnav" aria-label="Pie de página">
+      <a href="servicios.html">Servicios</a><a href="suministros.html">Suministros</a><a href="como-trabajamos.html">Cómo trabajamos</a><a href="modalidades.html">Modalidades</a><a href="contacto.html">Contacto</a>
+    </nav>
+    <p>MASERTEC MA SERVICIOS TÉCNICOS, S.R.L. · RNC 133-70808-6 · Neyba, Bahoruco, R.D. · Edición 2026, actualizada en octubre de 2026</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <div class="toast" id="toast" hidden><span id="toast-msg"></span><a href="contacto.html">Ver mi cotización</a></div>
+  <div class="qbar" id="qbar" role="region" aria-label="Mi cotización" hidden>
+    <span class="qinfo"><b id="qn">0</b><span id="qlabel">elegidos</span></span>
+    <a class="btn" href="contacto.html">Cotizar</a>
+  </div>
+</div>
+
+<div class="wa"><a class="wa-btn" href="https://wa.me/18293657007?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" title="Escribir por WhatsApp">
+  <img src="whatsapp.png" width="64" height="64" alt="" aria-hidden="true">
+</a></div>
+
+<script src="app.js" defer></script>
+</body>
+</html>

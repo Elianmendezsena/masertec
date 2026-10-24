@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /gracias
+
+Sitemap: https://TU-DOMINIO.netlify.app/sitemap.xml
