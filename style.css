@@ -346,6 +346,10 @@ footer p{margin:0;font-family:var(--f-mono);font-size:13px;letter-spacing:.04em;
 .dd-btn[aria-expanded="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--focus-ring)}
 .dd-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
 .opts.dd-panel{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:15;max-height:min(380px,60vh);overflow:auto;background:var(--panel);border:1px solid var(--accent);box-shadow:0 14px 34px var(--shadow);padding:14px 14px 0;gap:16px}
+.opts.dd-panel{max-height:min(380px,55vh);overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-width:thin;scrollbar-color:var(--accent) var(--panel-2)}
+.opts.dd-panel::-webkit-scrollbar{width:12px}
+.opts.dd-panel::-webkit-scrollbar-track{background:var(--panel-2)}
+.opts.dd-panel::-webkit-scrollbar-thumb{background:var(--accent);border:3px solid var(--panel-2);border-radius:8px}
 .dd-panel .optrow{grid-template-columns:minmax(0,1fr);gap:0}
 .dd-panel .opt{border:0;border-bottom:1px solid var(--line);background:transparent;min-height:46px;padding:9px 6px}
 .dd-panel .opt:hover{background:var(--panel-2)}

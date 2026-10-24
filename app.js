@@ -113,7 +113,14 @@
   /* ---------- menú desplegable de servicios y materiales ---------- */
   var dd = $("dd"), ddBtn = $("dd-btn"), ddPanel = $("opts");
   if (dd && ddBtn && ddPanel) {
-    var setDd = function (open) { ddPanel.hidden = !open; ddBtn.setAttribute("aria-expanded", open ? "true" : "false"); };
+    var setDd = function (open) {
+      ddPanel.hidden = !open;
+      ddBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (open) {
+        var r = ddPanel.getBoundingClientRect(), over = r.bottom - window.innerHeight + 16;
+        if (over > 0) { try { window.scrollBy({ top: over, behavior: "instant" }); } catch (e) { window.scrollBy(0, over); } }
+      }
+    };
     ddBtn.addEventListener("click", function () { setDd(ddPanel.hidden); });
     $("dd-done").addEventListener("click", function () { setDd(false); ddBtn.focus(); });
     document.addEventListener("click", function (ev) { if (!ddPanel.hidden && !dd.contains(ev.target)) setDd(false); });
