@@ -209,7 +209,10 @@
         track("solicitud-enviada");
         picked = []; persist();
         window.location.href = "gracias.html";
-      }).catch(function () {
+      }).catch(function (err) {
+        try { console.error("Envío del formulario falló:", err); } catch (e) {}
+        var det = $("err-detail");
+        if (det) det.textContent = err && err.message ? " (" + err.message + ")" : "";
         sending = false;
         sendBtn.disabled = false;
         sendBtn.textContent = "Enviar solicitud";
