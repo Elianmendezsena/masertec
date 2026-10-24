@@ -329,6 +329,16 @@ footer p{margin:0;font-family:var(--f-mono);font-size:13px;letter-spacing:.04em;
   html{scroll-behavior:auto}
 }
 
+/* selector de servicios (formulario) */
+.opts{max-height:none;overflow:visible;padding:0;border:0;background:transparent;gap:22px}
+.opts h4{display:flex;align-items:center;gap:12px;margin:0 0 10px;color:var(--fg)}
+.opts h4::after{content:"";flex:1;height:1px;background:var(--line)}
+.optrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.opt{display:flex;align-items:center;gap:12px;min-height:50px;padding:10px 12px;background:var(--bg);border:1px solid var(--ctl);font-size:15px;line-height:1.25;color:var(--fg)}
+.opt::before{content:"";flex:none;width:20px;height:20px;border:2px solid var(--ctl);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;line-height:1}
+.opt[aria-pressed="true"]{background:var(--panel-2);color:var(--fg);border-color:var(--accent)}
+.opt[aria-pressed="true"]::before{content:"\2713";background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+@media (max-width:620px){.optrow{grid-template-columns:minmax(0,1fr)}}
 /* paquete multipágina */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 main:focus{outline:none}
