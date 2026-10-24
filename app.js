@@ -71,12 +71,14 @@
     if (pc) pc.textContent = picked.length ? "(" + picked.length + (picked.length === 1 ? " elegido)" : " elegidos)") : "";
     var em = $("e-msg"); if (em) em.hidden = true;
     if (fsv) fsv.value = picked.join(", ");
+    var ddl = $("dd-label");
+    if (ddl) ddl.textContent = picked.length ? picked.length + (picked.length === 1 ? " seleccionado" : " seleccionados") : "Selecciona servicios o materiales";
     if (pickedEl) {
       pickedEl.innerHTML = "";
       if (!picked.length) {
         var e = document.createElement("span");
         e.className = "empty";
-        e.textContent = "Ninguno todavía. Marca abajo lo que necesitas o descríbelo en el mensaje.";
+        e.textContent = "Ninguno todavía. Abre la lista y marca lo que necesitas, o descríbelo en el mensaje.";
         pickedEl.appendChild(e);
       }
       picked.forEach(function (name) {
@@ -107,6 +109,17 @@
     if (b) toggle(b.getAttribute("data-name"));
   });
   renderPicked();
+
+  /* ---------- menú desplegable de servicios y materiales ---------- */
+  var dd = $("dd"), ddBtn = $("dd-btn"), ddPanel = $("opts");
+  if (dd && ddBtn && ddPanel) {
+    var setDd = function (open) { ddPanel.hidden = !open; ddBtn.setAttribute("aria-expanded", open ? "true" : "false"); };
+    ddBtn.addEventListener("click", function () { setDd(ddPanel.hidden); });
+    $("dd-done").addEventListener("click", function () { setDd(false); ddBtn.focus(); });
+    document.addEventListener("click", function (ev) { if (!ddPanel.hidden && !dd.contains(ev.target)) setDd(false); });
+    dd.addEventListener("keydown", function (e) { if (e.key === "Escape" && !ddPanel.hidden) { setDd(false); ddBtn.focus(); } });
+    dd.addEventListener("focusout", function (e) { if (!ddPanel.hidden && e.relatedTarget && !dd.contains(e.relatedTarget)) setDd(false); });
+  }
 
   /* ---------- filtros de servicios ---------- */
   var cardsEl = $("cards");
