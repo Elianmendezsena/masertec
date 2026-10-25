@@ -258,17 +258,47 @@
 
   /* ---------- galería de trabajos ---------- */
   var lb = $("lb");
+  var shots = qsa("button.shot"), cur = -1;
+  function visibleShots() { return shots.filter(function (b) { return !b.hidden; }); }
+  function showAt(list, n) {
+    var b = list[(n + list.length) % list.length];
+    cur = shots.indexOf(b);
+    $("lb-img").src = b.getAttribute("data-full");
+    $("lb-img").alt = b.getAttribute("data-alt") || "";
+    $("lb-cap").textContent = b.getAttribute("data-cap") || "";
+  }
+  function step(d) {
+    var list = visibleShots(); if (!list.length) return;
+    var pos = list.indexOf(shots[cur]);
+    showAt(list, (pos < 0 ? 0 : pos) + d);
+  }
   if (lb) {
-    qsa("button.shot").forEach(function (b) {
+    shots.forEach(function (b) {
       b.addEventListener("click", function () {
-        $("lb-img").src = b.getAttribute("data-full");
-        $("lb-img").alt = b.getAttribute("data-alt") || "";
-        $("lb-cap").textContent = b.getAttribute("data-cap") || "";
+        showAt(visibleShots(), visibleShots().indexOf(b));
         if (lb.showModal) lb.showModal(); else window.open(b.getAttribute("data-full"));
       });
     });
     $("lb-close").addEventListener("click", function () { lb.close(); });
+    if ($("lb-prev")) $("lb-prev").addEventListener("click", function (e) { e.stopPropagation(); step(-1); });
+    if ($("lb-next")) $("lb-next").addEventListener("click", function (e) { e.stopPropagation(); step(1); });
     lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+    lb.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { step(-1); e.preventDefault(); }
+      else if (e.key === "ArrowRight") { step(1); e.preventDefault(); }
+    });
+  }
+  var gf = $("gfilters");
+  if (gf) {
+    var chips = qsa(".fchip", gf), cnt = $("g-count");
+    chips.forEach(function (c) {
+      c.addEventListener("click", function () {
+        var cat = c.getAttribute("data-cat"), n = 0;
+        chips.forEach(function (o) { o.setAttribute("aria-pressed", o === c ? "true" : "false"); });
+        shots.forEach(function (b) { var ok = cat === "all" || b.getAttribute("data-cat") === cat; b.hidden = !ok; if (ok) n++; });
+        if (cnt) cnt.textContent = "Mostrando " + n + " de " + shots.length + " trabajos";
+      });
+    });
   }
 
   /* ---------- clics a medir (si hay contador) ---------- */
@@ -276,6 +306,7 @@
     var t = ev.target.closest && ev.target.closest("a,button");
     if (!t) return;
     if (t.id === "wa-link" || t.classList.contains("wa-link") || t.classList.contains("wa-btn")) track("clic-whatsapp");
+    else if (t.classList.contains("call-link") || t.classList.contains("call-btn")) track("clic-llamar");
     else if (t.id === "gmail-link" || t.id === "mail-link") track("clic-correo");
     else if (t.id === "copy-msg") track("copiar-mensaje");
     else if (t.classList.contains("pdf-dl")) track("descarga-catalogo");
