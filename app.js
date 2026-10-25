@@ -256,6 +256,21 @@
     });
   });
 
+  /* ---------- galería de trabajos ---------- */
+  var lb = $("lb");
+  if (lb) {
+    qsa("button.shot").forEach(function (b) {
+      b.addEventListener("click", function () {
+        $("lb-img").src = b.getAttribute("data-full");
+        $("lb-img").alt = b.getAttribute("data-alt") || "";
+        $("lb-cap").textContent = b.getAttribute("data-cap") || "";
+        if (lb.showModal) lb.showModal(); else window.open(b.getAttribute("data-full"));
+      });
+    });
+    $("lb-close").addEventListener("click", function () { lb.close(); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+  }
+
   /* ---------- clics a medir (si hay contador) ---------- */
   document.addEventListener("click", function (ev) {
     var t = ev.target.closest && ev.target.closest("a,button");
