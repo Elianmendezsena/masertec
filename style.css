@@ -373,9 +373,6 @@ footer p{margin:0;font-family:var(--f-mono);font-size:13px;letter-spacing:.04em;
   .call-btn{display:flex;position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(16px + 64px + 12px + env(safe-area-inset-bottom,0px));z-index:25;width:56px;height:56px;border-radius:50%;align-items:center;justify-content:center;background:var(--accent);color:var(--on-accent);box-shadow:0 6px 14px rgba(0,0,0,.45)}
 }
 /* inicio con foto */
-.hero-card{padding:0 0 8px;overflow:hidden}
-.hero-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
-.hero-card .claims{padding:0 22px}
 .svc-photo{display:block;position:relative;margin:4px 0 10px;border:1px solid var(--line);overflow:hidden;text-decoration:none}
 .svc-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .svc-photo span{position:absolute;left:0;bottom:0;padding:5px 10px;background:var(--accent);color:var(--on-accent);font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
